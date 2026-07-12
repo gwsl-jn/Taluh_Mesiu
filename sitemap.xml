@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://taluhmesiu.com/</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://taluhmesiu.com/public/webp/hero_eggs.png</image:loc>
+      <image:caption>Telur ayam segar berkualitas tinggi — Taluh Mesiu Bali</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://taluhmesiu.com/public/webp/product_eggs.png</image:loc>
+      <image:caption>Produk telur ayam segar 1 krat 30 butir — Taluh Mesiu</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://taluhmesiu.com/public/template/contact_page.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset>

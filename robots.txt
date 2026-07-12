@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /public/static/
+
+Sitemap: https://taluhmesiu.com/sitemap.xml
+
+# Taluh Mesiu — Telur Segar Berkualitas, Ungasan, Bali
+# Contact: +62 856-0048-7433 (WhatsApp)

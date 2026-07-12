@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="id" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Tentang Taluh Mesiu — Telur Segar dari Peternak Lokal Bali | Ungasan</title>
+    <meta name="description"
+        content="Taluh Mesiu — dari bahasa Bali: Taluh (Telur) Mesiu (Seribu). Setiap telur menghasilkan seribu rupiah bagi peternak. Kenali cerita dan visi kami di Ungasan, Kuta Selatan, Bali.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://taluhmesiu.com/public/template/index_page.html">
+
+    <meta property="og:title" content="Tentang Taluh Mesiu — Cerita di Balik Telur Seribu">
+    <meta property="og:description"
+        content="Dari bahasa Bali: Taluh (Telur) Mesiu (Seribu) — setiap telur menghasilkan seribu rupiah bagi peternak lokal Bali.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://taluhmesiu.com/public/template/index_page.html">
+    <meta property="og:image" content="https://taluhmesiu.com/public/webp/hero_eggs.png">
+
+    <link rel="icon" type="image/webp" href="../webp/icon_web.webp">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/style.css">
+
+    <style>
+        .about-hero {
+            padding: calc(var(--nav-height) + var(--sp-2xl)) 0 var(--sp-xl);
+            background: linear-gradient(135deg, var(--clr-bg) 0%, var(--clr-bg-alt) 50%, #FFE8CC 100%);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            opacity: 0.04;
+            background-image: radial-gradient(circle at 25% 35%, var(--clr-primary) 1px, transparent 1px),
+                radial-gradient(circle at 75% 65%, var(--clr-accent) 1px, transparent 1px);
+            background-size: 50px 50px, 70px 70px;
+            pointer-events: none;
+        }
+
+        .about-hero .hero-subtitle {
+            font-size: 1.15rem;
+            color: var(--clr-text-light);
+            max-width: 620px;
+            margin: var(--sp-sm) auto var(--sp-lg);
+        }
+
+        .story-section {
+            background: var(--clr-white);
+        }
+
+        .story-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--sp-xl);
+            align-items: center;
+        }
+
+        .story-image {
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .story-image img {
+            width: 100%;
+            aspect-ratio: 4 / 5;
+            object-fit: cover;
+        }
+
+        .story-content h2 {
+            margin-bottom: var(--sp-md);
+        }
+
+        .story-content p {
+            color: var(--clr-text-light);
+            margin-bottom: var(--sp-sm);
+        }
+
+        .meaning-card {
+            background: linear-gradient(135deg, rgba(224, 142, 69, 0.08), rgba(242, 169, 59, 0.08));
+            border-left: 4px solid var(--clr-primary);
+            border-radius: 0 var(--radius-md) var(--radius-md) 0;
+            padding: var(--sp-md) var(--sp-lg);
+            margin: var(--sp-lg) 0;
+        }
+
+        .meaning-card h3 {
+            font-size: 1.1rem;
+            color: var(--clr-primary-dark);
+            margin-bottom: 0.4rem;
+        }
+
+        .meaning-card p {
+            font-size: var(--fs-small);
+            color: var(--clr-text);
+            margin-bottom: 0;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--sp-lg);
+        }
+
+        .value-card {
+            background: var(--clr-bg);
+            border-radius: var(--radius-md);
+            padding: var(--sp-lg);
+            text-align: center;
+            border: 1px solid var(--clr-divider);
+            transition: all var(--transition-normal);
+        }
+
+        .value-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--clr-glass-border);
+        }
+
+        .value-card .value-icon {
+            font-size: 2.5rem;
+            margin-bottom: var(--sp-sm);
+        }
+
+        .value-card h3 {
+            margin-bottom: 0.4rem;
+            font-size: 1.1rem;
+        }
+
+        .value-card p {
+            font-size: var(--fs-small);
+            color: var(--clr-text-light);
+            margin-bottom: 0;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--sp-md);
+        }
+
+        .gallery-item {
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: all var(--transition-normal);
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.03);
+            box-shadow: var(--shadow-md);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+        }
+
+        @media (max-width: 768px) {
+            .story-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar scrolled" id="navbar" aria-label="Navigasi utama">
+        <div class="nav-inner">
+            <a href="../../index.html" class="nav-brand" aria-label="Taluh Mesiu - Halaman Utama">
+                <img src="../webp/icon_logo.webp" alt="Logo Taluh Mesiu" width="42" height="42" loading="eager">
+                <span>Taluh Mesiu</span>
+            </a>
+
+            <div class="nav-links" id="nav-links" role="menubar">
+                <a href="../../index.html" role="menuitem">Beranda</a>
+                <a href="../../index.html#produk" role="menuitem">Produk</a>
+                <a href="index_page.html" class="active" role="menuitem">Tentang</a>
+                <a href="contact_page.html" role="menuitem">Kontak</a>
+                <a href="https://wa.me/6285600487433?text=Halo%20Taluh%20Mesiu%2C%20saya%20mau%20pesan%20telur"
+                    target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm nav-cta" role="menuitem">
+                    Order Sekarang
+                </a>
+            </div>
+
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main>
+        <!-- About Hero -->
+        <section class="about-hero" aria-labelledby="about-heading">
+            <div class="container" style="position:relative;z-index:2;">
+                <span class="section-label">Tentang Kami</span>
+                <h1 id="about-heading">Cerita di Balik <span class="text-gradient">Taluh Mesiu</span></h1>
+                <p class="hero-subtitle">Dari bahasa Bali: <em>Taluh</em> (Telur) &amp; <em>Mesiu</em> (Seribu) — setiap
+                    telur menghasilkan seribu rupiah bagi peternak lokal di Bali.</p>
+                <a href="../../index.html#produk" class="btn btn-primary">Lihat Produk Kami</a>
+            </div>
+        </section>
+
+        <!-- Story Section -->
+        <section class="story-section section-padding" aria-labelledby="story-heading">
+            <div class="container">
+                <div class="story-grid">
+                    <div class="story-image reveal">
+                        <img src="../webp/testimonial_bg.png"
+                            alt="Suasana pasar tradisional Bali — keluarga membeli telur segar dari penjual lokal"
+                            width="600" height="750" loading="lazy">
+                    </div>
+
+                    <div class="story-content reveal">
+                        <span class="section-label">Kisah Kami</span>
+                        <h2 id="story-heading">Mendukung Peternak Lokal Bali</h2>
+                        <p>Taluh Mesiu lahir dari semangat memberdayakan peternak ayam lokal di Ungasan, Kuta Selatan.
+                            Kami percaya bahwa setiap butir telur bukan hanya sumber nutrisi, tapi juga sumber
+                            penghidupan bagi keluarga peternak.</p>
+
+                        <div class="meaning-card">
+                            <h3>🌺 Arti Nama "Taluh Mesiu"</h3>
+                            <p>Dalam bahasa Bali, <strong>Taluh</strong> berarti <strong>Telur</strong> dan
+                                <strong>Mesiu</strong> berarti <strong>Seribu</strong>. Filosofi ini bermakna bahwa
+                                setiap telur yang terjual menghasilkan seribu rupiah bagi peternak — simbol harapan dan
+                                penghidupan dari hal yang sederhana.</p>
+                        </div>
+
+                        <p>Dengan komitmen pada kualitas dan harga yang adil, kami menjembatani peternak lokal dengan
+                            konsumen yang menginginkan telur segar, higienis, dan terjangkau. Setiap krat yang Anda
+                            pesan tidak hanya memberi Anda nutrisi terbaik, tapi juga mendukung ekonomi lokal di Bali.
+                        </p>
+
+                        <a href="contact_page.html" class="btn btn-outline" style="margin-top:var(--sp-md);">Hubungi
+                            Kami</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Values Section -->
+        <section class="section-padding" style="background:var(--clr-bg);" aria-labelledby="values-heading">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-label">Nilai Kami</span>
+                    <h2 id="values-heading">Apa yang Kami <span class="text-gradient">Percaya</span></h2>
+                    <p>Prinsip-prinsip yang menjadi fondasi Taluh Mesiu dalam melayani pelanggan dan mendukung peternak.
+                    </p>
+                </div>
+
+                <div class="values-grid">
+                    <article class="value-card reveal reveal-delay-1">
+                        <div class="value-icon" aria-hidden="true">🤝</div>
+                        <h3>Harga Adil</h3>
+                        <p>Harga bersaing bagi konsumen, penghidupan layak bagi peternak. Win-win untuk semua pihak.</p>
+                    </article>
+
+                    <article class="value-card reveal reveal-delay-2">
+                        <div class="value-icon" aria-hidden="true">🌿</div>
+                        <h3>Kesegaran Terjamin</h3>
+                        <p>Telur dipasok langsung dari kandang ke tangan Anda. Proses singkat, kualitas terjaga.</p>
+                    </article>
+
+                    <article class="value-card reveal reveal-delay-3">
+                        <div class="value-icon" aria-hidden="true">🏡</div>
+                        <h3>Lokal & Berkelanjutan</h3>
+                        <p>Mendukung ekonomi peternak lokal Bali demi peternakan yang sehat dan berkelanjutan.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section class="section-padding" style="background:var(--clr-white);" aria-labelledby="gallery-heading">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-label">Galeri</span>
+                    <h2 id="gallery-heading">Dari Kandang ke <span class="text-gradient">Meja Anda</span></h2>
+                </div>
+
+                <div class="gallery-grid">
+                    <div class="gallery-item reveal reveal-delay-1">
+                        <img src="../webp/img_1.webp" alt="Telur ayam segar berkualitas dari Taluh Mesiu" width="400"
+                            height="400" loading="lazy">
+                    </div>
+                    <div class="gallery-item reveal reveal-delay-2">
+                        <img src="../webp/img_2.webp" alt="Proses sortir telur segar di Taluh Mesiu Bali" width="400"
+                            height="400" loading="lazy">
+                    </div>
+                    <div class="gallery-item reveal reveal-delay-3">
+                        <img src="../webp/img_3.webp" alt="Kemasan telur higienis siap kirim — Taluh Mesiu" width="400"
+                            height="400" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta-banner" aria-labelledby="about-cta-heading">
+            <div class="container reveal">
+                <h2 id="about-cta-heading">Pesan Telur Segar Sekarang!</h2>
+                <p>1 Krat (30 butir) hanya Rp50.000. Gratis ongkir area Kuta Selatan.</p>
+                <a href="https://wa.me/6285600487433?text=Halo%20Taluh%20Mesiu%2C%20saya%20ingin%20pesan%20telur%20segar"
+                    class="btn btn-lg" target="_blank" rel="noopener noreferrer">
+                    🥚 Order via WhatsApp
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-bottom" style="border-top:none;padding-top:0;">
+                <span>&copy; <span id="current-year">2026</span> Taluh Mesiu. Hak Cipta Dilindungi.</span>
+                <span><a href="../../index.html" style="opacity:0.7;">Kembali ke Beranda</a></span>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="back-to-top" aria-label="Kembali ke atas">↑</button>
+    <script src="../static/js/main.js" defer></script>
+</body>
+
+</html>
